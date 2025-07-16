@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --bs-dark-blue: #21254A; 
+  --bs-pink: #FF4081;      
+  --bs-light-gray: #F0F4F8; 
+  --bs-white: #FFFFFF;     
+  --bs-text-dark: #333;     
+  --bs-text-muted: #6c757d;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bs-white);
+  color: var(--bs-text-dark);
+  padding-top: 56px; 
+}
+
+.bg-dark-blue {
+  background-color: var(--bs-dark-blue);
+}
+.bg-light-gray {
+  background-color: var(--bs-light-gray);
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+.nav-link:hover, .navbar-brand:hover {
+  color: var(--bs-pink) !important;
+}
+
+.hero-section {
+  background-color: var(--bs-dark-blue);
+  padding: 100px 0;
+}
+
+.btn-accent {
+  background-color: var(--bs-pink);
+  border-color: var(--bs-pink);
+  color: var(--bs-white);
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+  background-color: #E03770; 
+  border-color: #E03770;
+  color: var(--bs-white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-accent {
+  border-color: var(--bs-pink);
+  color: var(--bs-pink);
+  font-weight: 600;
+  padding: 12px 30px;
+}
+.btn-outline-accent:hover {
+  background-color: var(--bs-pink);
+  color: var(--bs-white);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: var(--bs-pink);
+}
+
+.pricing-card {
+  background-color: var(--bs-white);
+  color: var(--bs-text-dark);
+  border: 1px solid var(--bs-light-gray);
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.1);
+}
+
+.pricing-card.highlighted {
+  transform: scale(1.05);
+  border: 2px solid var(--bs-pink);
+  background-color: var(--bs-white);
+}
+
+.pricing-card .card-title {
+    font-weight: 600;
+    color: var(--bs-pink);
+    font-size: 1.25rem;
+}
+
+.pricing-card .card-price .text-muted {
+    font-size: 1rem;
+}
+
+.pricing-card ul li {
+    padding: 0.5rem 0;
+}
+
+.wa-bubble {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25D366;
+  color: #FFF;
+  border-radius: 50px;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wa-bubble:hover {
+    transform: scale(1.1);
+    color: #FFF;
+}
+
+@media (max-width: 576px) {
+  h1, .display-4, .display-5 {
+    font-size: 2.5rem;
+  }
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1DA851; 
+  border-color: #1DA851;
+  color: #FFFFFF;
+}

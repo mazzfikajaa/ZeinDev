@@ -1,7 +1,5 @@
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/* Color Palette Variables */
 :root {
   --bs-dark-blue: #21254A; 
   --bs-pink: #FF4081;      
@@ -11,38 +9,60 @@
   --bs-text-muted: #6c757d;
 }
 
-/* Perbaikan untuk Sticky Footer dan Responsivitas Konten */
 html, body {
-  height: 100%; /* Pastikan html dan body mengambil tinggi penuh viewport */
+  height: 100%;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bs-white);
   color: var(--bs-text-dark);
-  padding-top: 56px; /* Offset for fixed navbar */
-  display: flex; /* Aktifkan flexbox pada body */
-  flex-direction: column; /* Susun item secara vertikal */
+  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Memastikan konten utama (selain navbar dan footer) memenuhi sisa ruang */
 .main-content-wrapper { 
-  flex: 1; /* Konten utama akan "tumbuh" dan mengambil sisa ruang yang tersedia */
-  display: flex; /* Jadikan flex container lagi untuk mengatur elemen dalamnya */
-  flex-direction: column; /* Jika ada sub-konten yang perlu diatur secara vertikal */
-  width: 100%; /* Pastikan mengambil lebar penuh */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-/* Perbaikan untuk responsivitas konten di dalam container */
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%; /* Pastikan container mengambil lebar penuh yang tersedia */
-  /* max-width: 100%; <- Hapus ini jika sebelumnya ditambahkan dan menyebabkan masalah */
+  padding-left: 15px; 
+  padding-right: 15px; 
+  width: 100%; 
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        max-width: 100%; 
+        padding-left: 20px; 
+        padding-right: 20px; 
+    }
+    .hero-section h1.display-4 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    .row > .col-md-4 {
+        padding-left: 10px; 
+        padding-right: 10px;
+    }
+
+    
+    .bg-light-gray img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 
-/* Background Colors */
 .bg-dark-blue {
   background-color: var(--bs-dark-blue);
 }
@@ -50,7 +70,6 @@ body {
   background-color: var(--bs-light-gray);
 }
 
-/* Navbar */
 .nav-link {
   transition: color 0.3s ease;
 }
@@ -58,13 +77,11 @@ body {
   color: var(--bs-pink) !important;
 }
 
-/* Hero Section Style */
 .hero-section {
   background-color: var(--bs-dark-blue);
   padding: 100px 0;
 }
 
-/* Custom Button Styles */
 .btn-accent {
   background-color: var(--bs-pink);
   border-color: var(--bs-pink);
@@ -92,13 +109,11 @@ body {
   color: var(--bs-white);
 }
 
-/* Features Section */
 .feature-icon {
   font-size: 3rem;
   color: var(--bs-pink);
 }
 
-/* Pricing Section */
 .pricing-card {
   background-color: var(--bs-white);
   color: var(--bs-text-dark);
@@ -140,7 +155,7 @@ body {
   bottom: 40px;
   right: 40px;
   background-color: #25D366;
-  color: #FFF; /* Warna teks/ikon bubble */
+  color: #FFF; 
   border-radius: 50px;
   font-size: 30px;
   box-shadow: 2px 2px 3px #999;
@@ -151,10 +166,10 @@ body {
   align-items: center;
 }
 
-.wa-bubble i.bi { /* Target ikon di dalam bubble */
-    color: inherit; /* Mengambil warna dari parent (.wa-bubble) */
-    font-size: inherit; /* Mengambil ukuran font dari parent (.wa-bubble) */
-    line-height: 1; /* Pastikan ikon sejajar dengan tengah */
+.wa-bubble i.bi {
+    color: inherit;
+    font-size: inherit;
+    line-height: 1;
 }
 
 .wa-bubble:hover {
@@ -162,11 +177,6 @@ body {
     color: #FFF;
 }
 
-@media (max-width: 576px) {
-  h1, .display-4, .display-5 {
-    font-size: 2.5rem;
-  }
-}
 
 .btn-whatsapp {
   background-color: #25D366;

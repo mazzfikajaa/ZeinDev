@@ -1,5 +1,7 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* Color Palette Variables */
 :root {
   --bs-dark-blue: #21254A; 
   --bs-pink: #FF4081;      
@@ -9,13 +11,38 @@
   --bs-text-muted: #6c757d;
 }
 
+/* Perbaikan untuk Sticky Footer dan Responsivitas Konten */
+html, body {
+  height: 100%; /* Pastikan html dan body mengambil tinggi penuh viewport */
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bs-white);
   color: var(--bs-text-dark);
-  padding-top: 56px; 
+  padding-top: 56px; /* Offset for fixed navbar */
+  display: flex; /* Aktifkan flexbox pada body */
+  flex-direction: column; /* Susun item secara vertikal */
 }
 
+/* Memastikan konten utama (selain navbar dan footer) memenuhi sisa ruang */
+.main-content-wrapper { 
+  flex: 1; /* Konten utama akan "tumbuh" dan mengambil sisa ruang yang tersedia */
+  display: flex; /* Jadikan flex container lagi untuk mengatur elemen dalamnya */
+  flex-direction: column; /* Jika ada sub-konten yang perlu diatur secara vertikal */
+  width: 100%; /* Pastikan mengambil lebar penuh */
+}
+
+/* Perbaikan untuk responsivitas konten di dalam container */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%; /* Pastikan container mengambil lebar penuh yang tersedia */
+  /* max-width: 100%; <- Hapus ini jika sebelumnya ditambahkan dan menyebabkan masalah */
+}
+
+
+/* Background Colors */
 .bg-dark-blue {
   background-color: var(--bs-dark-blue);
 }
@@ -23,6 +50,7 @@ body {
   background-color: var(--bs-light-gray);
 }
 
+/* Navbar */
 .nav-link {
   transition: color 0.3s ease;
 }
@@ -30,11 +58,13 @@ body {
   color: var(--bs-pink) !important;
 }
 
+/* Hero Section Style */
 .hero-section {
   background-color: var(--bs-dark-blue);
   padding: 100px 0;
 }
 
+/* Custom Button Styles */
 .btn-accent {
   background-color: var(--bs-pink);
   border-color: var(--bs-pink);
@@ -62,17 +92,20 @@ body {
   color: var(--bs-white);
 }
 
+/* Features Section */
 .feature-icon {
   font-size: 3rem;
   color: var(--bs-pink);
 }
 
+/* Pricing Section */
 .pricing-card {
   background-color: var(--bs-white);
   color: var(--bs-text-dark);
   border: 1px solid var(--bs-light-gray);
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .pricing-card:hover {
@@ -107,7 +140,7 @@ body {
   bottom: 40px;
   right: 40px;
   background-color: #25D366;
-  color: #FFF;
+  color: #FFF; /* Warna teks/ikon bubble */
   border-radius: 50px;
   font-size: 30px;
   box-shadow: 2px 2px 3px #999;
@@ -116,6 +149,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.wa-bubble i.bi { /* Target ikon di dalam bubble */
+    color: inherit; /* Mengambil warna dari parent (.wa-bubble) */
+    font-size: inherit; /* Mengambil ukuran font dari parent (.wa-bubble) */
+    line-height: 1; /* Pastikan ikon sejajar dengan tengah */
 }
 
 .wa-bubble:hover {
@@ -141,4 +180,8 @@ body {
   background-color: #1DA851; 
   border-color: #1DA851;
   color: #FFFFFF;
+}
+
+.text-pink {
+  color: #e74c3c; 
 }
